@@ -26,14 +26,14 @@ from python_datalogger import DataLogger
 
 # using datalogger decorator to record basic exceptions
 @DataLogger.logger
-def divisor(num: int) -> float:
+def test_method(num: int) -> float:
     return 1000/num
 
 
-divisor(2)  # if no exceptions are encountered, logs the time taken for this method to run
+test_method(2)  # if no exceptions are encountered, logs the time taken for this method to run
 
 # raises ZeroDivisionError for demonstration
-divisor(0) # logs the the error, in case of an exception
+test_method(0) # logs the the error, in case of an exception
 
 ```
     
