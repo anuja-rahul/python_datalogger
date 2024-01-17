@@ -2,7 +2,7 @@
 simplifies the python data logging process for quicker and easier data logging.
 
 Author: Anuja Rahul
-Datalogger/datalogger.py
+python_datalogger/datalogger.py
 """
 import os
 import time
