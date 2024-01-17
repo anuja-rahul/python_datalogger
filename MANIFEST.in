@@ -1,0 +1,4 @@
+graft python_datalogger
+include pyproject.toml
+include setup.py
+global-exclude *.py[cod]

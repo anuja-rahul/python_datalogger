@@ -1,9 +1,11 @@
 from setuptools import setup, find_packages
+import pathlib
 
 
 VERSION = '0.0.1'
 DESCRIPTION = 'Simplified data logger for Python'
-LONG_DESCRIPTION = 'A package that allows to log data and errors faster and easily'
+LONG_DESCRIPTION = pathlib.Path("README.md").read_text()
+LICENSE = 'MIT License'
 
 # Setting up
 setup(
@@ -14,16 +16,26 @@ setup(
     description=DESCRIPTION,
     long_description_content_type="text/markdown",
     long_description=LONG_DESCRIPTION,
+    license=LICENSE,
+    project_urls={
+        "Source": "https://github.com/anuja-rahul/python_datalogger",
+        "Documentation": "https://github.com/anuja-rahul/python_datalogger/blob/master/README.md"
+    },
     packages=find_packages(),
     zip_safe=False,
     install_requires=[],
     keywords=['python', 'logger', 'log_debug', 'log_info', 'log_warning', 'log_error', 'log_critical'],
     classifiers=[
-        "Development Status :: 1 - Planning",
+        "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",
-        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
+        "Topic :: Education :: Testing",
         "Operating System :: Unix",
         "Operating System :: MacOS :: MacOS X",
         "Operating System :: Microsoft :: Windows",
-    ]
+    ],
+    python_requires='>=3.10',
+    include_package_data=True,
 )
