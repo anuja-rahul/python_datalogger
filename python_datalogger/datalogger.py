@@ -90,7 +90,7 @@ class DataLogger:
         logging.basicConfig(level=level)
 
     @staticmethod
-    def logger(function: Callable):
+    def logger(function: Callable) -> Callable:
         """Decorator to time functions and log any errors of a function"""
         method_name = function.__name__
         error_logger = DataLogger(name="ErrorLogger", level="ERROR", propagate=True)
