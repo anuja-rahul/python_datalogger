@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: python_datalogger
+Version: 0.0.1
+Summary: Simplified data logger for Python
+Author: Anuja Rahul Gunasinghe
+Author-email: <a.r.gunasinghe@gmail.com>
+Keywords: python,logger,log_debug,log_info,log_warning,log_error,log_critical
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+A package that allows to log data and errors faster and easily
