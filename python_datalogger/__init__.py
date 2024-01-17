@@ -1,2 +1,2 @@
-from datalogger import DataLogger
+from .datalogger import DataLogger
 
