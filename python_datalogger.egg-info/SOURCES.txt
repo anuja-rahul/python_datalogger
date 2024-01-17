@@ -1,0 +1,12 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+python_datalogger/__init__.py
+python_datalogger/datalogger.py
+python_datalogger.egg-info/PKG-INFO
+python_datalogger.egg-info/SOURCES.txt
+python_datalogger.egg-info/dependency_links.txt
+python_datalogger.egg-info/not-zip-safe
+python_datalogger.egg-info/top_level.txt
