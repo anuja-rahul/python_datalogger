@@ -28,7 +28,7 @@ def example_method(num: int) -> float:
 example_method(2)  # if no exceptions are encountered, logs the time taken for this method to run
 
 # raises ZeroDivisionError for demonstration
-example_method(0) # logs the the error, in case of an exception
+example_method(0) # logs the error, in case of an exception
 
 ```
     
