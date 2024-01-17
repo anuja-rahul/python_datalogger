@@ -55,7 +55,7 @@ class DataLogger:
         """
         Creates a new instance of the DataLogger class
         :param name: name of the logger
-        :param propagate: True/False, If true the logger display the logs on terminal
+        :param propagate: True/False, If true the logger display the logs on console
         :param level: security level of the logger
         """
 
