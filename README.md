@@ -3,6 +3,12 @@
 
     Datalogger will record all the recorded logs in a local directory (./logs)
 
+## How to install datalogger from test-pypi
+    
+#### Run on your terminal :
+    pip install -i https://test.pypi.org/simple/ python-datalogger==0.0.1
+
+
 ## How to install datalogger locally
 
     01. Download this project.
@@ -13,10 +19,6 @@
 
     Now you can use datalogger locally any time you want
 
-## How to install datalogger from test-pypi
-    
-#### Run on your terminal :
-    pip install -i https://test.pypi.org/simple/ python-datalogger==0.0.1
 
 ### How to use datalogger decorator for basic exception handling. (Example):
 ```python
