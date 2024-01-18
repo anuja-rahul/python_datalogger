@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: python_datalogger
-Version: 0.0.1
+Version: 0.0.2
 Summary: Simplified data logger for Python
 Author: Anuja Rahul Gunasinghe
 Author-email: <a.r.gunasinghe@gmail.com>
@@ -36,6 +36,11 @@ License-File: LICENSE.txt
 
     Now you can use datalogger locally any time you want
 
+## How to install datalogger from test-pypi
+    
+#### Run on your terminal :
+    pip install -i https://test.pypi.org/simple/ python-datalogger==0.0.1
+
 ### How to use datalogger decorator for basic exception handling. (Example):
 ```python
 
@@ -44,14 +49,14 @@ from python_datalogger import DataLogger
 
 # using datalogger decorator to record basic exceptions
 @DataLogger.logger
-def divisor(num: int) -> float:
+def test_method(num: int) -> float:
     return 1000/num
 
 
-divisor(2)  # if no exceptions are encountered, logs the time taken for this method to run
+test_method(2)  # if no exceptions are encountered, logs the time taken for this method to run
 
 # raises ZeroDivisionError for demonstration
-divisor(0) # logs the the error, in case of an exception
+test_method(0) # logs the the error, in case of an exception
 
 ```
     

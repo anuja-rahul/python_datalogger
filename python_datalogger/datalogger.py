@@ -6,6 +6,7 @@ python_datalogger/datalogger.py
 """
 import os
 import time
+import uuid
 import logging
 import datetime as dt
 from typing import Callable
@@ -90,11 +91,17 @@ class DataLogger:
         logging.basicConfig(level=level)
 
     @staticmethod
+    def __get_logger_id():
+        return uuid.uuid4()
+
+    @staticmethod
     def logger(function: Callable) -> Callable:
         """Decorator to time functions and log any errors of a function"""
         method_name = function.__name__
-        error_logger = DataLogger(name="ErrorLogger", level="ERROR", propagate=True)
-        info_logger = DataLogger(name="InfoLogger", level="INFO", propagate=False)
+        error_logger_id = str(DataLogger.__get_logger_id()) + "__ErrorLogger"
+        info_logger_id = str(DataLogger.__get_logger_id()) + "__InfoLogger"
+        error_logger = DataLogger(name=error_logger_id, level="ERROR", propagate=True)
+        info_logger = DataLogger(name=info_logger_id, level="INFO", propagate=False)
 
         def wrapper(*args, **kwargs):
             try:

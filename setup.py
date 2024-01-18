@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 import pathlib
 
 
-VERSION = '0.0.1'
+VERSION = '0.0.2'
 DESCRIPTION = 'Simplified data logger for Python'
 LONG_DESCRIPTION = pathlib.Path("README.md").read_text()
 LICENSE = 'MIT License'
