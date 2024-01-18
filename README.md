@@ -1,4 +1,4 @@
-## python_datalogger
+## python_datalogger (v0.0.2)
 #### Simplified datalogger using python for easier and faster data logging.
 
     Datalogger will record all the recorded logs in a local directory (./logs)
