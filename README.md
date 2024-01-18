@@ -6,7 +6,7 @@
 ## How to install datalogger from test-pypi
     
 #### Run on your terminal :
-    pip install -i https://test.pypi.org/simple/ python-datalogger==0.0.1
+    pip install -i https://test.pypi.org/simple/ python-datalogger==0.0.2
 
 
 ## How to install datalogger locally
