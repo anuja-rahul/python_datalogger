@@ -30,6 +30,7 @@ class DataLogger:
 
             __init_env : initiates the required directories for saving log files
             __set_logger : sets the logger security levels prior to logging
+            __get_logger_id : Generate a unique id for each of the new logger instances
 
         Public:
 
@@ -92,6 +93,7 @@ class DataLogger:
 
     @staticmethod
     def __get_logger_id():
+        """Generate a unique id for each of the new logger instances"""
         return uuid.uuid4()
 
     @staticmethod
