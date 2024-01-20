@@ -50,7 +50,7 @@ logger = DataLogger(name="TestLogger", level="DEBUG", propagate=True)
 
 # name can be any name you like for the current instance of the Datalogger
 # level has 5 security options (DEBUG, INFO, WARNING, ERROR, CRITICAL)
-# propagate has 2 options (True/False), if true log is displayed on the terminal
+# propagate has 2 options (True/False), if true, the current log is displayed on the terminal
 
 
 def test_method():
