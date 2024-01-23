@@ -20,8 +20,10 @@ class DataLogger:
     Attributes:
     ----------
 
-        log_path (string): Path to the log file
-        levels (list): List of logger security levels
+        Private:
+
+            __log_path (string): Path to the log file
+            __levels (list): List of logger security levels
 
     Methods:
     -------
@@ -44,8 +46,8 @@ class DataLogger:
 
     """
 
-    log_path = f"{os.getcwd()}/logs"
-    levels = {
+    __log_path = f"{os.getcwd()}/logs"
+    __levels = {
         "DEBUG": logging.DEBUG,
         "INFO": logging.INFO,
         "WARNING": logging.WARNING,
@@ -62,9 +64,9 @@ class DataLogger:
         """
 
         DataLogger.__init_env()
-        DataLogger.__set_logger(DataLogger.levels[level.upper()])
+        DataLogger.__set_logger(DataLogger.__levels[level.upper()])
         self.__today = dt.datetime.today()
-        self.__filename = (f"{DataLogger.log_path}/{self.__today.day:02d}-{self.__today.month:02d}-"
+        self.__filename = (f"{DataLogger.__log_path}/{self.__today.day:02d}-{self.__today.month:02d}-"
                            f"{self.__today.year}.log")
         self.__logger = logging.getLogger(name)
         self.__logger.propagate = propagate  # Enables/Disables logger from displaying in console
@@ -77,7 +79,7 @@ class DataLogger:
     def __init_env(cls):
         """Initiates the required directories for the log files"""
         try:
-            os.mkdir(DataLogger.log_path)
+            os.mkdir(DataLogger.__log_path)
         except FileExistsError:
             pass
 
@@ -92,7 +94,7 @@ class DataLogger:
         logging.basicConfig(level=level)
 
     @staticmethod
-    def __get_logger_id():
+    def __get_logger_id() -> uuid:
         """Generate a unique id for each of the new logger instances"""
         return uuid.uuid4()
 
