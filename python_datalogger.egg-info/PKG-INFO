@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: python_datalogger
-Version: 0.0.2
+Version: 0.0.3
 Summary: Simplified data logger for Python
 Author: Anuja Rahul Gunasinghe
 Author-email: <a.r.gunasinghe@gmail.com>
@@ -21,10 +21,16 @@ Requires-Python: >=3.10
 Description-Content-Type: text/markdown
 License-File: LICENSE.txt
 
-## python_datalogger
+## python_datalogger (v0.0.2)
 #### Simplified datalogger using python for easier and faster data logging.
 
     Datalogger will record all the recorded logs in a local directory (./logs)
+
+## How to install datalogger from test-pypi
+    
+#### Run on your terminal :
+    pip install -i https://test.pypi.org/simple/ python-datalogger
+
 
 ## How to install datalogger locally
 
@@ -36,12 +42,8 @@ License-File: LICENSE.txt
 
     Now you can use datalogger locally any time you want
 
-## How to install datalogger from test-pypi
-    
-#### Run on your terminal :
-    pip install -i https://test.pypi.org/simple/ python-datalogger==0.0.1
 
-### How to use datalogger decorator for basic exception handling. (Example):
+### How to use Datalogger.logger decorator for basic exception handling. (Example):
 ```python
 
 from python_datalogger import DataLogger
@@ -56,10 +58,20 @@ def test_method(num: int) -> float:
 test_method(2)  # if no exceptions are encountered, logs the time taken for this method to run
 
 # raises ZeroDivisionError for demonstration
-test_method(0) # logs the the error, in case of an exception
+test_method(0) # logs the error, in case of an exception
 
 ```
-    
+
+### How to use Datalogger.timeit decorator to time a function runtime.
+```python
+from python_datalogger import DataLogger
+
+@DataLogger.timeit
+def test_method(num: int) -> float:
+    return 1000/num
+
+test_method(10) # displays the runtime before returning the result for test_method
+```
 
 ### How to use datalogger for specific info logging. (Example):
 ```python
@@ -71,7 +83,7 @@ logger = DataLogger(name="TestLogger", level="DEBUG", propagate=True)
 
 # name can be any name you like for the current instance of the Datalogger
 # level has 5 security options (DEBUG, INFO, WARNING, ERROR, CRITICAL)
-# propagate has 2 options (True/False), if true log is displayed on the terminal
+# propagate has 2 options (True/False), if true, the current log is displayed on the terminal
 
 
 def test_method():
