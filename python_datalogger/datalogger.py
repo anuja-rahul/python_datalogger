@@ -67,7 +67,7 @@ class DataLogger:
         self.__filename = (f"{DataLogger.log_path}/{self.__today.day:02d}-{self.__today.month:02d}-"
                            f"{self.__today.year}.log")
         self.__logger = logging.getLogger(name)
-        self.__logger.propagate = propagate   # Enables/Disables logger from displaying in console
+        self.__logger.propagate = propagate  # Enables/Disables logger from displaying in console
         self.__file_handler = logging.FileHandler(self.__filename)
         self.__formatter = logging.Formatter("%(asctime)s: %(name)s - %(levelname)s - %(message)s")
         self.__file_handler.setFormatter(self.__formatter)
@@ -114,6 +114,21 @@ class DataLogger:
                 return result
             except Exception as exception:
                 error_logger.log_error(f"[{method_name}] - {exception}")
+
+        return wrapper
+
+    @staticmethod
+    def timeit(function: Callable) -> Callable:
+        """Decorator to time functions"""
+        method_name = function.__name__
+
+        def wrapper(*args, **kwargs):
+            start_time = time.time()
+            result = function(*args, **kwargs)
+            end_time = time.time()
+            time_elapsed = end_time - start_time
+            print(f"\n{method_name} returned in {time_elapsed:.10f} seconds.\n")
+            return result
 
         return wrapper
 

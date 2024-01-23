@@ -20,7 +20,7 @@
     Now you can use datalogger locally any time you want
 
 
-### How to use datalogger decorator for basic exception handling. (Example):
+### How to use Datalogger.logger decorator for basic exception handling. (Example):
 ```python
 
 from python_datalogger import DataLogger
@@ -35,10 +35,20 @@ def test_method(num: int) -> float:
 test_method(2)  # if no exceptions are encountered, logs the time taken for this method to run
 
 # raises ZeroDivisionError for demonstration
-test_method(0) # logs the the error, in case of an exception
+test_method(0) # logs the error, in case of an exception
 
 ```
-    
+
+### How to use Datalogger.timeit decorator to time a function runtime.
+```python
+from python_datalogger import DataLogger
+
+@DataLogger.timeit
+def test_method(num: int) -> float:
+    return 1000/num
+
+test_method(10) # displays the runtime before returning the result for test_method
+```
 
 ### How to use datalogger for specific info logging. (Example):
 ```python
