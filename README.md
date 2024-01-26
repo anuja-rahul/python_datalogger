@@ -42,7 +42,7 @@ test_method(0) # logs the error, in case of an exception
 
 ```
 
-### How to use Datalogger.timeit decorator to time a function runtime.
+### How to use Datalogger.timeit decorator to time a function runtime. (Example):
 ```python
 from python_datalogger import DataLogger
 
