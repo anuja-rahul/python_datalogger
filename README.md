@@ -4,8 +4,11 @@
     Datalogger will record all the recorded logs in a local directory (./logs)
 
 ## How to install datalogger from test-pypi
+
+#### Visit :
+    https://test.pypi.org/project/python-datalogger/
     
-#### Run on your terminal :
+#### Or run on your terminal :
     pip install -i https://test.pypi.org/simple/ python-datalogger
 
 
