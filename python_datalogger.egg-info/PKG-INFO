@@ -1,13 +1,13 @@
 Metadata-Version: 2.1
 Name: python_datalogger
-Version: 0.0.3
+Version: 0.0.4
 Summary: Simplified data logger for Python
 Author: Anuja Rahul Gunasinghe
 Author-email: <a.r.gunasinghe@gmail.com>
 License: MIT License
 Project-URL: Source, https://github.com/anuja-rahul/python_datalogger
 Project-URL: Documentation, https://github.com/anuja-rahul/python_datalogger/blob/master/README.md
-Keywords: python,logger,log_debug,log_info,log_warning,log_error,log_critical
+Keywords: python,DataLogger,logger,timeit,log_debug,log_info,log_warning,log_error,log_critical
 Classifier: Development Status :: 4 - Beta
 Classifier: Intended Audience :: Developers
 Classifier: Programming Language :: Python :: 3.10
@@ -21,14 +21,17 @@ Requires-Python: >=3.10
 Description-Content-Type: text/markdown
 License-File: LICENSE.txt
 
-## python_datalogger (v0.0.2)
+## python_datalogger (v0.0.4)
 #### Simplified datalogger using python for easier and faster data logging.
 
-    Datalogger will record all the recorded logs in a local directory (./logs)
+    Datalogger will save all the recorded logs in a local directory (./logs)
 
 ## How to install datalogger from test-pypi
+
+#### Visit :
+    https://test.pypi.org/project/python-datalogger/
     
-#### Run on your terminal :
+#### Or run on your terminal :
     pip install -i https://test.pypi.org/simple/ python-datalogger
 
 
@@ -62,7 +65,7 @@ test_method(0) # logs the error, in case of an exception
 
 ```
 
-### How to use Datalogger.timeit decorator to time a function runtime.
+### How to use Datalogger.timeit decorator to time a function runtime. (Example):
 ```python
 from python_datalogger import DataLogger
 
