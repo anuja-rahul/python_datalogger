@@ -155,4 +155,5 @@ class DataLogger:
         self.__logger.critical(info)
 
     def __repr__(self):
-        return f"[logger={self.__logger.name}, propagate={self.__logger.propagate}, path={self.__filename}]"
+        return (f"[logger={self.__logger.name}, propagate={self.__logger.propagate}, path={self.__filename}, "
+                f"level={self.__logger.level}]")
