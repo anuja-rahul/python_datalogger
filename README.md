@@ -1,7 +1,7 @@
 ## python_datalogger (v0.0.3)
 #### Simplified datalogger using python for easier and faster data logging.
 
-    Datalogger will record all the recorded logs in a local directory (./logs)
+    Datalogger will save all the recorded logs in a local directory (./logs)
 
 ## How to install datalogger from test-pypi
 
