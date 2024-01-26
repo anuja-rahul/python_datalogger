@@ -37,6 +37,7 @@ class DataLogger:
         Public:
 
             logger : decorator to log basic exceptions
+            timeit : decorator to measure the runtime of a function
             log_debug : logs the debug logs
             log_info : logs the info logs
             log_warning : logs the warning logs
