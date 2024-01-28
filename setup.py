@@ -24,7 +24,8 @@ setup(
     packages=find_packages(),
     zip_safe=False,
     install_requires=[],
-    keywords=['python', 'DataLogger', 'logger', 'timeit', 'log_debug', 'log_info', 'log_warning', 'log_error', 'log_critical'],
+    keywords=['python', 'DataLogger', 'logger', 'timeit', 'log_debug', 'log_info',
+              'log_warning', 'log_error', 'log_critical'],
     classifiers=[
         "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",
