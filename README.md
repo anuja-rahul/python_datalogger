@@ -1,4 +1,4 @@
-## python_datalogger (v0.0.4)
+## [python_datalogger (v0.0.4)](https://test.pypi.org/project/python-datalogger/)
 #### Simplified datalogger using python for easier and faster data logging.
 
     Datalogger will save all the recorded logs in a local directory (./logs)
@@ -6,7 +6,7 @@
 ## How to install datalogger from test-pypi
 
 #### Visit :
-    https://test.pypi.org/project/python-datalogger/
+    [https://test.pypi.org/project/python-datalogger/](https://test.pypi.org/project/python-datalogger/)
     
 #### Or run on your terminal :
     pip install -i https://test.pypi.org/simple/ python-datalogger
